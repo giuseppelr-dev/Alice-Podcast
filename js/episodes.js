@@ -3,7 +3,7 @@ const PUBLISHER = "Alice, Alessandro e Gaia";
 const EPISODES = [
   {
     id: 1,
-    title: "La strada che non avevo previsto",
+    title: "Le cose che ricominciano",
     description:
       "Quando la vita cambia improvvisamente direzione e ci costringe a uscire dai piani che avevamo immaginato. L'episodio parla di imprevisti, paura del cambiamento e nuovi inizi. Alla fine nasce la domanda: come si fa ad andare avanti senza sapere davvero dove si sta andando?",
     audio: "assets/PiccoleCose_EP01.mp3",
