@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Piccole Cose — podcast motivazionale di Alice, Alessandro e Gaia" />
+    <title>PICCOLE COSE | Podcast</title>
+    <link rel="stylesheet" href="css/spotify.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="page__header-bg">
+        <header>
+          <div class="top-bar no-interaction">
+            <span class="top-bar__back" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </span>
+          </div>
+
+          <div class="show-header">
+            <img
+              class="show-header__cover"
+              src="assets/cover.jpeg"
+              alt="Copertina del podcast Piccole Cose"
+              width="120"
+              height="120"
+            />
+            <div class="show-header__info">
+              <h1 class="show-header__title">PICCOLE COSE</h1>
+              <p class="show-header__publisher">Alice, Alessandro e Gaia</p>
+              <p class="show-header__meta">Podcast • 10 episodi</p>
+            </div>
+          </div>
+        </header>
+
+        <div class="action-bar no-interaction" aria-hidden="true">
+          <span class="action-bar__avatar"></span>
+          <span class="action-bar__follow">Segui</span>
+          <div class="action-bar__icons">
+            <span class="action-bar__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
+                <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+              </svg>
+            </span>
+            <span class="action-bar__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.604.852.997 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+              </svg>
+            </span>
+            <span class="action-bar__icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <circle cx="5" cy="12" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="19" cy="12" r="2" />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="tab-bar" role="tablist" aria-label="Sezioni podcast">
+        <button class="tab-bar__tab active" role="tab" aria-selected="true" data-tab="episodi">Episodi</button>
+        <button class="tab-bar__tab" role="tab" aria-selected="false" data-tab="informazioni">Informazioni</button>
+        <button class="tab-bar__tab" role="tab" aria-selected="false" data-tab="simili">Contenuti simili</button>
+      </nav>
+
+      <main>
+        <section id="panel-episodi" class="tab-panel active" role="tabpanel" aria-label="Episodi">
+          <div class="filter-bar no-interaction" aria-hidden="true">
+            <span class="filter-bar__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6" />
+              </svg>
+            </span>
+            <span>Più recenti • Tutti gli episodi</span>
+          </div>
+          <ol id="episode-list" class="episode-list" aria-label="Lista episodi"></ol>
+        </section>
+
+        <section id="panel-informazioni" class="tab-panel" role="tabpanel" aria-label="Informazioni">
+          <div class="info-panel">
+            <p id="info-text" class="info-panel__text"></p>
+          </div>
+        </section>
+
+        <section id="panel-simili" class="tab-panel" role="tabpanel" aria-label="Contenuti simili">
+          <div class="similar-panel">
+            <p class="similar-panel__empty">Nessun contenuto</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="mini-player no-interaction" aria-hidden="true">
+      <img class="mini-player__cover" src="assets/cover.jpeg" alt="" width="40" height="40" />
+      <div class="mini-player__info">
+        <p class="mini-player__title">Piccole Cose</p>
+        <p class="mini-player__artist">Alice, Alessandro e Gaia</p>
+      </div>
+      <div class="mini-player__controls">
+        <span class="mini-player__btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="2" y="7" width="16" height="10" rx="1" />
+            <path d="M22 11v2" />
+          </svg>
+        </span>
+        <span class="mini-player__btn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </span>
+      </div>
+    </div>
+
+    <nav class="bottom-nav no-interaction" aria-hidden="true">
+      <span class="bottom-nav__item">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3z" />
+        </svg>
+        Home
+      </span>
+      <span class="bottom-nav__item active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" />
+          <path d="M20 20l-4-4" />
+        </svg>
+        Ricerca
+      </span>
+      <span class="bottom-nav__item">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M4 4h5v16H4V4zm6 0h5v16h-5V4zm6 0h5v16h-5V4z" />
+        </svg>
+        La tua libreria
+      </span>
+      <span class="bottom-nav__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 5v14M5 12h14" />
+        </svg>
+        Crea
+      </span>
+    </nav>
+
+    <script src="js/episodes.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
