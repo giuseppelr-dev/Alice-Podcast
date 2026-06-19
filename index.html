@@ -95,24 +95,39 @@
       </main>
     </div>
 
-    <div class="mini-player no-interaction" aria-hidden="true">
-      <img class="mini-player__cover" src="assets/cover.jpeg" alt="" width="40" height="40" />
-      <div class="mini-player__info">
-        <p class="mini-player__title">Piccole Cose</p>
-        <p class="mini-player__artist">Alice, Alessandro e Gaia</p>
-      </div>
+    <audio id="audio-player" preload="metadata"></audio>
+
+    <div id="mini-player" class="mini-player" aria-label="Player audio">
+      <button type="button" class="mini-player__main" id="player-main" aria-label="Episodio in riproduzione">
+        <img id="player-cover" class="mini-player__cover" src="assets/cover.jpeg" alt="" width="40" height="40" />
+        <div class="mini-player__info">
+          <p id="player-title" class="mini-player__title">Piccole Cose</p>
+          <p id="player-artist" class="mini-player__artist">Alice, Alessandro e Gaia</p>
+        </div>
+      </button>
       <div class="mini-player__controls">
-        <span class="mini-player__btn">
+        <span class="mini-player__btn no-interaction" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <rect x="2" y="7" width="16" height="10" rx="1" />
             <path d="M22 11v2" />
           </svg>
         </span>
-        <span class="mini-player__btn">
+        <button type="button" id="player-play-btn" class="mini-player__btn" aria-label="Riproduci">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M8 5v14l11-7z" />
           </svg>
-        </span>
+        </button>
+      </div>
+      <div
+        id="player-progress"
+        class="mini-player__progress"
+        role="slider"
+        aria-label="Avanzamento riproduzione"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="0"
+      >
+        <div id="player-progress-fill" class="mini-player__progress-fill"></div>
       </div>
     </div>
 
